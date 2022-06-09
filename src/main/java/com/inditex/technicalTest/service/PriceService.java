@@ -70,6 +70,8 @@ public class PriceService {
                         .build())
             .orElseThrow(() -> getDataNotFoundException(productId, brandId, dateTime));
       }
+    } catch (DataNotFoundException e) {
+      throw e;
     } catch (Exception e) {
       throw new ExpectationException(e.getMessage());
     }

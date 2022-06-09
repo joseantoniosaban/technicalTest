@@ -1,9 +1,12 @@
 package com.inditex.technicalTest.controller;
 
 import static org.springframework.http.HttpStatus.EXPECTATION_FAILED;
+import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 import com.inditex.technicalTest.dto.ErrorResponse;
 import com.inditex.technicalTest.dto.Price;
+import com.inditex.technicalTest.exceptions.ApiException;
+import com.inditex.technicalTest.exceptions.DataNotFoundException;
 import com.inditex.technicalTest.exceptions.ExpectationException;
 import com.inditex.technicalTest.service.PriceService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -20,6 +23,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -119,13 +123,27 @@ public class PriceController {
     try {
       return new ResponseEntity<Price>(
           priceService.findPrice(productId, brandId, date), HttpStatus.OK);
+    } catch (DataNotFoundException e) {
+      throw e;
     } catch (ExpectationException e) {
       throw e;
     }
   }
 
   @ExceptionHandler(ExpectationException.class)
-  public ResponseEntity<ErrorResponse> handleApiException(ExpectationException ex) {
+  @ResponseStatus(value = EXPECTATION_FAILED)
+  public ResponseEntity<ErrorResponse> handleExpectationException(ApiException ex) {
+    return new ResponseEntity<>(
+        ErrorResponse.builder()
+            .code(ex.getCode())
+            .detail(ex.getDetail())
+            .title(ex.getTitle())
+            .build(),
+        EXPECTATION_FAILED);
+  }
+  @ExceptionHandler(DataNotFoundException.class)
+  @ResponseStatus(value = NOT_FOUND)
+  public ResponseEntity<ErrorResponse> handleDataNotFoundException(ApiException ex) {
     return new ResponseEntity<>(
         ErrorResponse.builder()
             .code(ex.getCode())

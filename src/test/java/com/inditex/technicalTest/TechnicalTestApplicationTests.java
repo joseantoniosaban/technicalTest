@@ -29,6 +29,7 @@ class TechnicalTestApplicationTests {
       "/technicalTest/priceStream?date=2020-06-15-10.00.00&productId=35455&brandId=1";
   private static final String PATH_MAPPING_TEST5 =
       "/technicalTest/priceStream?date=2020-06-16-21.00.00&productId=35455&brandId=1";
+
   @Autowired private PriceController priceController;
   @Autowired private TestRestTemplate restTemplate;
   @Autowired private PathConfig pathConfig;
@@ -74,7 +75,7 @@ class TechnicalTestApplicationTests {
   }
 
   @Test
-  void givenTest3_whenGetPrice_thenResponds() {
+  void givenTest3_whenFindPrice_thenResponds() {
 
     var response =
         restTemplate.getForObject(
@@ -86,7 +87,7 @@ class TechnicalTestApplicationTests {
   }
 
   @Test
-  void givenTest4_whenGetPrice_thenResponds() {
+  void givenTest4_whenFindPrice_thenResponds() {
 
     var response =
         restTemplate.getForObject(
@@ -98,7 +99,7 @@ class TechnicalTestApplicationTests {
   }
 
   @Test
-  void givenTest5_whenGetPrice_thenResponds() {
+  void givenTest5_whenFindPrice_thenResponds() {
 
     var response =
         restTemplate.getForObject(
