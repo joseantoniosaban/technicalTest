@@ -1,8 +1,8 @@
 package com.inditex.technicalTest.model;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
-import java.sql.Date;
 import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -41,10 +41,11 @@ public class Price implements Serializable {
 
   @Column(name = "PRICE_LIST")
   private int fare;
+
   private int productId;
   private int priority;
   private double price;
+
   @Column(name = "CURR")
   private String currency;
-
 }

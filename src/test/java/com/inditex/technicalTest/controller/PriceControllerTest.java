@@ -16,13 +16,14 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 public class PriceControllerTest {
 
   private static final String INCORRECT_PATH_MAPPING = "/technicalTest/brand";
-  private static final String PATH_MAPPING = "/technicalTest/price?date=2020-06-14-10.00.00&productId=35453&brandId=1";
+  private static final String PATH_MAPPING =
+      "/technicalTest/price?date=2020-06-14-10.00.00&productId=35453&brandId=1";
+  private static final String PATH_MAPPING_PRICE_STREAM =
+      "/technicalTest/priceStream?date=2020-06-14-10.00.00&productId=35453&brandId=1";
 
-  @InjectMocks
-  private PriceController priceController;
+  @InjectMocks private PriceController priceController;
 
-  @Mock
-  private PriceService priceService;
+  @Mock private PriceService priceService;
 
   private MockMvc mockMvc;
 
@@ -45,5 +46,15 @@ public class PriceControllerTest {
   @Test
   public void getPriceWhitValidRequestShouldReturn200() throws Exception {
     mockMvc.perform(get(PATH_MAPPING)).andExpect(status().isOk());
+  }
+
+  @Test
+  public void findPriceWithInvalidPostRequestShouldReturn405() throws Exception {
+    mockMvc.perform(post(PATH_MAPPING_PRICE_STREAM)).andExpect(status().isMethodNotAllowed());
+  }
+
+  @Test
+  public void findPriceWhitValidRequestShouldReturn200() throws Exception {
+    mockMvc.perform(get(PATH_MAPPING_PRICE_STREAM)).andExpect(status().isOk());
   }
 }

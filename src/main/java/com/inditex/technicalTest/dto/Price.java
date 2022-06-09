@@ -1,5 +1,6 @@
 package com.inditex.technicalTest.dto;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 import lombok.AllArgsConstructor;
