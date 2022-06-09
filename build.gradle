@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.7.0'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id "com.diffplug.spotless" version '6.2.2'
 }
 
 group = 'com.inditex'
@@ -30,4 +31,24 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+spotless {
+    encoding 'UTF-8'
+    java {
+        target fileTree('.') {
+            include '**/*.java'
+            exclude '**/build/**', '**/build-*/**'
+        }
+        toggleOffOn()
+        googleJavaFormat()
+        removeUnusedImports()
+        importOrder()
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
+    json {
+        target 'src/**/*.json'
+        simple()
+    }
 }
