@@ -150,6 +150,6 @@ public class PriceController {
             .detail(ex.getDetail())
             .title(ex.getTitle())
             .build(),
-        EXPECTATION_FAILED);
+        NOT_FOUND);
   }
 }
