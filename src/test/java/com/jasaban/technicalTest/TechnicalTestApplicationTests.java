@@ -1,10 +1,10 @@
-package com.inditex.technicalTest;
+package com.jasaban.technicalTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.inditex.technicalTest.config.PathConfig;
-import com.inditex.technicalTest.controller.PriceController;
-import com.inditex.technicalTest.dto.Price;
+import com.jasaban.technicalTest.config.PathConfig;
+import com.jasaban.technicalTest.controller.PriceController;
+import com.jasaban.technicalTest.dto.Price;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

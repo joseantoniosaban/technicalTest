@@ -10,7 +10,7 @@ server:
     context-path: /api/${name}/v${version.major}
 
 springdoc:
-  packagesToScan: com.inditex
+  packagesToScan: com.jasaban
 
 swagger:
   version: ${version.major}.${version.minor}.${version.maintenance}

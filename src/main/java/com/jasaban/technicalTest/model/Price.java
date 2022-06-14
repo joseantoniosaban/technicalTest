@@ -1,4 +1,4 @@
-package com.inditex.technicalTest.model;
+package com.jasaban.technicalTest.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

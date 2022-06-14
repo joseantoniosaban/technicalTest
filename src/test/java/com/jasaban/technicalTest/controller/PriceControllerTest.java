@@ -1,10 +1,10 @@
-package com.inditex.technicalTest.controller;
+package com.jasaban.technicalTest.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.inditex.technicalTest.service.PriceService;
+import com.jasaban.technicalTest.service.PriceService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

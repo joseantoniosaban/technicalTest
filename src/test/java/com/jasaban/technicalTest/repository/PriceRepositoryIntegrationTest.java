@@ -1,4 +1,4 @@
-package com.inditex.technicalTest.repository;
+package com.jasaban.technicalTest.repository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

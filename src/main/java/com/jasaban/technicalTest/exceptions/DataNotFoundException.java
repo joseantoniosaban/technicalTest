@@ -1,4 +1,4 @@
-package com.inditex.technicalTest.exceptions;
+package com.jasaban.technicalTest.exceptions;
 
 public class DataNotFoundException extends ApiException {
   private static final String TITLE = "Data not found";

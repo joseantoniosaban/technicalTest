@@ -1,4 +1,4 @@
-package com.inditex.technicalTest;
+package com.jasaban.technicalTest;
 
 
 import org.springframework.boot.SpringApplication;

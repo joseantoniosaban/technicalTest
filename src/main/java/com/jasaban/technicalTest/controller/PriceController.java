@@ -1,14 +1,14 @@
-package com.inditex.technicalTest.controller;
+package com.jasaban.technicalTest.controller;
 
 import static org.springframework.http.HttpStatus.EXPECTATION_FAILED;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
-import com.inditex.technicalTest.dto.ErrorResponse;
-import com.inditex.technicalTest.dto.Price;
-import com.inditex.technicalTest.exceptions.ApiException;
-import com.inditex.technicalTest.exceptions.DataNotFoundException;
-import com.inditex.technicalTest.exceptions.ExpectationException;
-import com.inditex.technicalTest.service.PriceService;
+import com.jasaban.technicalTest.dto.ErrorResponse;
+import com.jasaban.technicalTest.dto.Price;
+import com.jasaban.technicalTest.exceptions.ApiException;
+import com.jasaban.technicalTest.exceptions.DataNotFoundException;
+import com.jasaban.technicalTest.exceptions.ExpectationException;
+import com.jasaban.technicalTest.service.PriceService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;

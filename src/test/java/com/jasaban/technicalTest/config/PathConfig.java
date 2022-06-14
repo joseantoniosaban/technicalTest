@@ -1,4 +1,4 @@
-package com.inditex.technicalTest.config;
+package com.jasaban.technicalTest.config;
 
 
 import org.springframework.boot.context.properties.ConfigurationProperties;

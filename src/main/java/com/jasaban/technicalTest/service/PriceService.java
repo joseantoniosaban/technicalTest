@@ -1,10 +1,10 @@
-package com.inditex.technicalTest.service;
+package com.jasaban.technicalTest.service;
 
 
-import com.inditex.technicalTest.dto.Price;
-import com.inditex.technicalTest.exceptions.DataNotFoundException;
-import com.inditex.technicalTest.exceptions.ExpectationException;
-import com.inditex.technicalTest.repository.PriceRepository;
+import com.jasaban.technicalTest.dto.Price;
+import com.jasaban.technicalTest.exceptions.DataNotFoundException;
+import com.jasaban.technicalTest.exceptions.ExpectationException;
+import com.jasaban.technicalTest.repository.PriceRepository;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.inditex.technicalTest.exceptions;
+package com.jasaban.technicalTest.exceptions;
 
 
 import lombok.Getter;

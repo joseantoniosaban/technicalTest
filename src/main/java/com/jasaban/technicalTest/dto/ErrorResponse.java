@@ -1,4 +1,4 @@
-package com.inditex.technicalTest.dto;
+package com.jasaban.technicalTest.dto;
 
 
 import com.fasterxml.jackson.annotation.JsonInclude;

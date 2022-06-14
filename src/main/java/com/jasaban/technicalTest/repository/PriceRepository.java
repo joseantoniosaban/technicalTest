@@ -1,7 +1,7 @@
-package com.inditex.technicalTest.repository;
+package com.jasaban.technicalTest.repository;
 
 
-import com.inditex.technicalTest.model.Price;
+import com.jasaban.technicalTest.model.Price;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
