@@ -4,13 +4,13 @@ This is an simple example about how to build an application with Spring Boot, Sp
 
 This application uses a H2 Data Base, wich is a Data Base in memory.
 
-##How to run it?
+## How to run it?
 
 ```
 gradle bootRun
 ```
 
-##How can I test it?
+## How can I test it?
 
 you have two different endpoints:
 ```bash
